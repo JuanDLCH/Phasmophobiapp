@@ -1,0 +1,29 @@
+.ghostCard {
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.ghostCard:hover {
+    transition: opacity 0.1s ease-in-out;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.ghostCard:active .ghostImage {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+    transition: transform 0.1s ease-in;
+}
+
+.ghostImage {
+    border-radius: 10px;
+    background-color: azure;
+}
+
+@media (max-width: 560px) {
+    .ghostImage {
+        width: 90%;
+        height: auto;
+    }
+}

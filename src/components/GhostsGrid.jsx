@@ -1,16 +1,30 @@
-import {useEffect, useState} from 'react';
-import {GhostCard} from './GhostCard'
+import { useEffect, useState } from 'react';
+import { GhostCard } from './GhostCard'
+import data from '../utils/ghosts'
+import { Spinner } from './Spinner';
+import styles from '../styles/GhostsGrid.module.css';
 
-export const GhostsGrid = () => {
-    const [ghosts, setGhosts] = useState([]);
-    const [isLoading , setIsLoading] = useState(true);
+export function GhostsGrid({search}) {
+    const [ghosts, setGhosts] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(data => {
-            setGhosts(data);
-            setIsLoading(false);
-        })
-    }, []);
+        setIsLoading(true)
+        setGhosts([...data].filter(ghost => ghost.name.includes(search)))
+        setIsLoading(false)
+    }, [search])
+
+    if (isLoading) {
+        return <Spinner />
+    }
+
+    return (
+        <div >
+            <ul className={styles.ghostsGrid}>
+                {ghosts.map(ghost => (
+                    <GhostCard key={ghost?.name} ghost={ghost} />
+                ))}
+            </ul>
+        </div>
+    )
 }
