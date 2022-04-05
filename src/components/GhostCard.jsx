@@ -23,7 +23,7 @@ export const GhostCard = ({ ghost }) => {
     return (
         //tarjeta con imagenes traidas en orden
         <li className={styles.ghostCard}>
-            <Link to={`/ghosts/${name}`}>
+            <Link to={`/ghosts/${name}`} className={styles.link}>
                 <img
                     width={230}
                     height={345}
@@ -31,7 +31,7 @@ export const GhostCard = ({ ghost }) => {
                     alt={name}
                     className={styles.ghostImage}
                 />
-                <h2>{name}</h2>
+                <h2 className={styles.ghostName}>{name}</h2>
             </Link>
 
         </li>

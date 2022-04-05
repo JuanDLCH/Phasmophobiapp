@@ -1,0 +1,31 @@
+.body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
+  padding-top: 10vh;
+}
+
+h2 {
+  text-decoration: none;
+}
+
+/* Neon styled title */
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0f00e6, 0 0 40px #0f00e6,
+    0 0 50px #0f00e6, 0 0 60px #0f00e6, 0 0 70px #0f00e6;
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+@media(max-width: 560px) {
+  .title {
+    font-size: 30px;
+  }
+}

@@ -10,7 +10,7 @@ export function GhostsGrid({search}) {
 
     useEffect(() => {
         setIsLoading(true)
-        setGhosts([...data].filter(ghost => ghost.name.includes(search)))
+        setGhosts([...data].filter(ghost => ghost?.name.toLowerCase().includes(search?.toLowerCase())))
         setIsLoading(false)
     }, [search])
 

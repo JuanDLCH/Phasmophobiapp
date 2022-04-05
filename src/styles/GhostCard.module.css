@@ -21,6 +21,16 @@
     background-color: azure;
 }
 
+.ghostName{
+    color: white;
+    margin: 0;
+    text-decoration: none;
+}
+
+.link{
+    text-decoration: none;
+}
+
 @media (max-width: 560px) {
     .ghostImage {
         width: 90%;

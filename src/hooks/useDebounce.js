@@ -8,7 +8,7 @@ export const useDebounce = (value, delay) => {
 
     useEffect(() => {
         if (!value) {
-            return setDebouncedValue(value);
+            return setDebouncedValue('');
         }
 
         const handler = setTimeout(() => {
