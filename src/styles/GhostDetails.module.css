@@ -1,0 +1,42 @@
+html {
+    background-color: black;
+}
+
+.detailsContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+
+.ghostImage {
+    border-radius: 15px;
+    background-color: azure;
+    object-fit: fill;
+    max-width: 300px;
+    margin: 15px;
+}
+
+.ghostDetails {
+    font-size: 1.2rem;
+    margin: 15px;
+    width: 60%;
+    height: 40vh;
+}
+
+.evidences {
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.item {
+    width: 100%;
+}
+
+.ghostDetails:first-child {
+    margin-top: 0;
+}

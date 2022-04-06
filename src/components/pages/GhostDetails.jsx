@@ -25,45 +25,8 @@ export const GhostDetails = () => {
     const { name: ghostName, primaryEvidences, secondaryEvidences, desc, strenghts, weaknesses } = ghost;
 
     return (
-        <div className={styles.ghostDetails}>
-            <h1>{ghostName}</h1>
-            <div className={styles.ghostDetails__evidences}>
-                <h2>Primary Evidences</h2>
-                <ul>
-                    {primaryEvidences.map(evidence => (
-                        <li key={evidence}>{evidence}</li>
-                    ))}
-                </ul>
-            </div>
-            <div className={styles.ghostDetails__evidences}>
-                <h2>Secondary Evidences</h2>
-                <ul>
-                    {secondaryEvidences.map(evidence => (
-                        <li key={evidence}>{evidence}</li>
-                    ))}
-                </ul>
-            </div>
-            <div className={styles.ghostDetails__desc}>
-                <h2>Description</h2>
-                <p>{desc}</p>
-            </div>
-            <div className={styles.ghostDetails__strenghts}>
-                <h2>Strenghts</h2>
-                <ul>
-                    {strenghts.map(strength => (
-                        <li key={strength}>{strength}</li>
-                    ))}
-                </ul>
-            </div>
-            <div className={styles.ghostDetails__weaknesses}>
-                <h2>Weaknesses</h2>
-                <ul>
-                    {weaknesses.map(weakness => (
-                        <li key={weakness}>{weakness}</li>
-                    ))}
-                </ul>
-            </div>
-            <div className={styles.ghostDetails__image}>
+        <div className={styles.detailsContainer}>
+            <div className={styles.ghostImage}>
                 <img
                     width={230}
                     height={345}
@@ -71,6 +34,52 @@ export const GhostDetails = () => {
                     alt={ghostName}
                     className={styles.ghostImage}
                 />
+            </div>
+            <div className={styles.ghostDetails}>
+                <h1>{ghostName}</h1>
+                <hr></hr>
+                <div className={styles.ghostDetails__desc}>
+                    <h2>Description</h2>
+                    <p>{desc}</p>
+                </div>
+                <hr></hr>
+                <div className={styles.evidences}>
+                    <div className={styles.item}>
+                        <h2>Primary Evidences</h2>
+                        <ul>
+                            {primaryEvidences.map(evidence => (
+                                <li key={evidence}>{evidence}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className={styles.item}>
+                        <h2>Secondary Evidences</h2>
+                        <ul>
+                            {secondaryEvidences.map(evidence => (
+                                <li key={evidence}>{evidence}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+                <hr></hr>
+                <div className={styles.evidences}>
+                    <div className={styles.item}>
+                        <h2>Strenghts</h2>
+                        <ul>
+                            {strenghts.map(strength => (
+                                <li key={strength}>{strength}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className={styles.item}>
+                        <h2>Weaknesses</h2>
+                        <ul>
+                            {weaknesses.map(weakness => (
+                                <li key={weakness}>{weakness}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
