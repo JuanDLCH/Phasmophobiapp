@@ -6,7 +6,7 @@ export default function NavbarComp() {
     const navigate = useNavigate();
 
     const handleButtonClick = () => {
-        navigate('/');
+        navigate('/ghostbuster');
     }
 
     return (
@@ -29,7 +29,7 @@ export default function NavbarComp() {
                                 <NavDropdown.Item as={NavLink} to={'/voiceLines/spiritbox'}>SpiritBox</NavDropdown.Item>
                                 <NavDropdown.Item as={NavLink} to={'/voiceLines/attacktrigger'}>Attack Trigger</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link as={NavLink} to='/ghosts/Spirit'>Ghosts</Nav.Link>
+                            <Nav.Link as={NavLink} to='/'>Ghosts</Nav.Link>
                             <Button variant="outline-success" onClick={handleButtonClick}>Ghost Buster</Button>
                         </Nav>
                     </Navbar.Collapse>
