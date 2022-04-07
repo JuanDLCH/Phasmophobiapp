@@ -1,8 +1,8 @@
-import { GhostsGrid } from '../GhostsGrid';
-import { SearchBar } from '../SearchBar'
+import { GhostsGrid } from '../components/GhostsGrid';
+import { SearchBar } from '../components/SearchBar'
 import { useSearchParams } from 'react-router-dom'
-import { useDebounce } from '../../hooks/useDebounce';
-import styles from '../../styles/LandingPage.module.css'
+import { useDebounce } from '../hooks/useDebounce';
+import styles from '../styles/LandingPage.module.css'
 
 export const LandingPage = () => {
     const[query] = useSearchParams();

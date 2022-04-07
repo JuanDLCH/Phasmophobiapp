@@ -1,5 +1,5 @@
-import styles from '../../styles/VoiceLines.module.css'
-import { voicelines } from '../../utils/voicelines'
+import styles from '../styles/VoiceLines.module.css'
+import { voicelines } from '../utils/voicelines'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import { ListGroup } from 'react-bootstrap'

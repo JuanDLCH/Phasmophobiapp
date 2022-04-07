@@ -8,6 +8,6 @@
 
 @media(max-width: 560px){
     .ghostsGrid {
-        grid-template-columns: 100%;
+        grid-template-columns: repeat(2, 0.5fr);
     }
 }

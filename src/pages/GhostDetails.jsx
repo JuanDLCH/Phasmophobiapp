@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { Spinner } from '../Spinner';
-import styles from '../../styles/GhostDetails.module.css';
-import data from '../../utils/ghosts'
-import imgs from '../../utils/images'
+import { Spinner } from '../components/Spinner';
+import styles from '../styles/GhostDetails.module.css';
+import data from '../utils/ghosts'
+import imgs from '../utils/images'
 
 export const GhostDetails = () => {
     const { name } = useParams();

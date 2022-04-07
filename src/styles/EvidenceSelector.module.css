@@ -1,0 +1,31 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 100px;
+    grid-row-gap: 0px;
+    width: 100%;
+}
+
+.khe{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}
+
+.toggle {
+    display: flex;
+    text-align: left;
+}
+
+@media(max-width: 560px) {
+    .toggle {
+        margin-top: 8%;
+        margin-left: 20%;
+    }
+
+    .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
